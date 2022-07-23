@@ -1,0 +1,337 @@
+<!DOCTYPE>
+<HTML>
+<head>
+<title>DashBoard | Dreadnought
+</title>
+<link href="convertk.png" rel="icon" type="image/png"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+	background : #e1cada ;
+}
+#logo {
+	margin : 1rem 0 2rem 0 ;
+	width : 100%;
+	object-fit:contain;
+}
+nav {	
+	width : 12rem ;
+	background : #2433ff ; 
+	height : 100% ;
+	margin: -0.5rem 0.5rem 0 -0.5rem;
+	position : sticky ;
+}
+.menulabel {
+	list-style-type : none ;
+	display : flex ;
+	color : #fff ;
+	padding : 1rem 2rem ;
+	font-size : 1.2rem ;
+	font-weight : 800 ;
+	background : #2433ff ;
+	cursor : pointer ;
+}
+.menulabel:hover{
+	background : #535cdf ;
+	color : #000 ;
+}
+.menulabel:hover i{
+	color : #000;
+}
+i {
+	margin-right : 0.5rem ;
+}
+.footer {
+	display : flex ;
+	justify-content : center ;
+	margin-top : 6rem ; 
+	margin-bottom : 2rem ;
+}
+header {
+	
+	margin-top : 1.5rem ;
+	display : flex ;
+	flex-direction : row-reverse ;
+	align-items : center ;
+	padding-right : 2.5rem ;
+}
+.space {
+	margin-right : 1.2rem ;
+}
+main{
+	padding : 1.5rem ;
+	margin-left : 1.5rem ;
+}
+.title {
+	font-size : 2.2rem ;
+	font-weight : 550 ;
+	
+}
+.smallbox {
+	width : 7.5rem ;
+	padding : 1.5rem ;
+	border-radius : 1rem ;
+	height : 7.5rem ;
+	background : transparent ;
+	cursor : pointer ;
+	box-shadow : 0 0 0.5rem rgba(36,51,255) ;
+	margin : 1.2rem 1.2rem 0 0 ;
+	transition : height 1.3s , width 1.3s;
+}
+.smallbox:hover {
+	height : 8.5rem;
+	width : 8.5rem ;
+	
+}
+.boxlabel {
+	font-weight : 500 ;
+	font-size : 1.6rem ;
+	margin-bottom : 0.4rem ;
+}
+.boxnum {
+	font-weight : 800 ;
+	font-size : 1.4rem ;
+}
+.flow {
+	font-size : 1rem ;
+	font-weight : 900 ;
+	margin-top : 0.6rem ;
+}
+.green {
+	color : green ;
+}
+.red {
+	color : red ;
+}
+.right {
+	float : right ;
+}
+.chart {
+	width : 100% ;
+	border-radius : 1rem ;
+	max-width : 600px ;
+	padding : 1.5rem ;
+	cursor : pointer ;
+	margin : 1.2rem 0 0 2rem ;
+	border : solid 0.01rem rgba(36,51,255) ;
+	box-shadow : 0 0 2rem rgba(36,51,255) ;
+}
+table {
+	border-collapse : collapse ;
+	margin-top : 1rem ;
+	cursor : pointer ;
+}
+td,th {
+ 	border : 0.1rem solid black ;
+	
+	
+	padding : 0.5rem 1.5rem ;
+	justify-content : center ;
+}
+.noleft {
+	border-left : none ;
+}
+.noright {
+	border-right : none ;
+}
+#piechart {
+	width:100%;
+	max-width:350px ;
+	padding : 1.5rem ;
+	cursor : pointer ;
+	margin : 1.2rem 0 0 2rem ;
+}
+</style>
+<script>
+</script>
+
+
+
+</head>
+
+<body>
+<section style="display:flex">
+<nav>
+<img src="convert.png" alt="DreadNought" id="logo" />
+<a class="menulabel" ><i class="fa fa-home" style="font-size:25px"></i>Home</a>
+<a class="menulabel"><i class="fa fa-tasks" style="font-size:25px"></i>Courses</a>
+<a class="menulabel"><i class="fa fa-bar-chart-o" style="font-size:25px"></i>Analytics</a>
+<a class="menulabel"><i class="fa fa-user-secret" style="font-size:24px"></i>Mentors</a>
+<a class="menulabel"><i class="fa fa-group style="font-size:25px;color:#fff;"></i>Enterpreneurs</a>
+<a class="menulabel"><i class="fa fa-sitemap" style="font-size:25px"></i>Referrals</a>
+
+<a></br></br></a>
+<a class="menulabel"><i class="fa fa-ticket" style="font-size:24px"></i>Coupons</a>
+<a class="menulabel"><i class="fa fa-cog fa-spin" style="font-size:25px;"></i>Settings</a>
+<section class="footer">
+&copy; RAHUL VERMAN 
+</br>2022
+</section>
+</nav>
+
+<section style="width: 90%;margin:-0.5rem">
+<header>
+<section class="right">
+<i class="fa fa-envelope-open-o space" style="font-size:30px;"></i>
+<i class="fa fa-user-circle-o space " style="font-size:30px;color: rgba(36,51,255)"></i>
+<i class="fa fa-sign-out" style="font-size:30px"></i>
+</section>
+</header>
+<main>
+<span class="title">Dashboard</span>
+<section class="overviewcon" style="display:flex">
+<section class="overview">
+<section style="display:flex">
+<div class="smallbox">
+<div class="boxlabel">Referals</div>
+<div class="boxnum">3,675</div>
+<div class="flow green"><i class="fa fa-level-up" style="font-size:18px"></i>23.56</div>
+</div>
+<div class="smallbox">
+<div class="boxlabel">Visits</div>
+<div class="boxnum">19,235</div>
+<div class="flow red"><i class="fa fa-level-down" style="font-size:18px"></i>3.56</div>
+</div>
+</section>
+<section style="display:flex">
+<div class="smallbox">
+<div class="boxlabel">Profit</div>
+<div class="boxnum">556,675</div>
+<div class="flow red"><i class="fa fa-level-down" style="font-size:18px"></i>3.56</div>
+</div>
+<div class="smallbox">
+<div class="boxlabel">Growth</div>
+<div class="boxnum">3,675</div>
+<div class="flow green"><i class="fa fa-level-up" style="font-size:18px"></i>9.86</div>
+</div>
+</section>
+</section>
+<canvas id="myChart" style="width:100%;max-width:600px" class="chart"></canvas>
+</section>
+<script>
+var xValues = [100,200,300,400,500,600,700,800,900,1000];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    }, { 
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+</script>
+<section style="display:flex;margin-top:1.5rem">
+<section>
+<table id="reporttable">
+<h2>Top Mentors of Month</h2>
+<thead>
+<tr>
+<th class="noleft">Unique ID</th>
+<th>Name</th>
+<th>Referrals</th>
+<th>Hours of Mentorship</th>
+<th class="noright">Certification</th>
+</tr>
+<tr>
+<td class="noleft">DN1005</td>
+<td>Ravi Shastri</td>
+<td>1,256</td>
+<td>36hrs 56min</td>
+<td class="noright">Certified</td>
+</tr>
+<tr>
+<td class="noleft">DN1005</td>
+<td>Kavya N</td>
+<td>1,156</td>
+<td>53hrs 50min</td>
+<td class="noright">Certified</td>
+</tr>
+<tr>
+<td class="noleft">DN1005</td>
+<td>Shubam Singh</td>
+<td>1,056</td>
+<td>60hrs 06min</td>
+<td class="noright">Certified</td>
+</tr>
+<tr>
+<td class="noleft">DN1005</td>
+<td>Nova Kali</td>
+<td>956</td>
+<td>32hrs 49min</td>
+<td class="noright">Certified</td>
+</tr>
+<tr>
+<td class="noleft">DN1005</td>
+<td>Garudh Kanth</td>
+<td>856</td>
+<td>46hrs 56min</td>
+<td class="noright">Certified</td>
+</tr>
+</thead>
+</table>
+</section>
+<canvas id="pieChart" style="width:100%;max-width:400px"></canvas>
+</section>
+<script>
+var xValues = [">1000",">500", ">300", ">100"];
+var yValues = [55, 49, 44, 25];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("pieChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "Total Referals"
+    }
+  }
+});
+</script>
+
+</main>
+</section>
+</section>
+
+<!--
+<footer>
+<section class="left">
+&copy; Dreadnought 2022
+FAQs
+</section>
+<section class="right">
+<a>Terms of Use</a></br>
+<a>Privacy Policy</a>
+</section>
+</footer>
+-->
+
+</body>
+</HTML>
